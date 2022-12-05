@@ -12,11 +12,9 @@ class Player {
 
     //Constructeur
 
-<<<<<<< HEAD
+
     public function __construct($id, $nom, $endurance, $att, $def, $vitesse)
-=======
-    public function __construct($id, $nom, $endurance, $position, $att, $def, $vitesse)
->>>>>>> c2e1d83a72f119e83c0d4e9d033dd915a5962527
+
     {
         $this->id = $id;
         $this->nom = $nom;
@@ -46,38 +44,29 @@ class Player {
 
     //Fonction pour afficher
 
-    public function affichage(){
-<<<<<<< HEAD
-        echo "ID : " . $this->id . "<br>";
-        echo "Nom : " . $this->nom . "<br>";
-        echo "Endurance : " . $this->endurance . "<br>";
-        echo "Attaque : " . $this->att . "<br>";
-        echo "Défense : " . $this->def . "<br>";
-        echo "Vitesse : " . $this->vitesse . "<br>";
-=======
+    public function afficher_joueur($tailleListe){
         
+        if($tailleListe == 3){
+            $col = 4;
+        } elseif ($tailleListe == 4){
+            $col = 3;
+        } elseif ($tailleListe == 1){
+            $col = 12;
+        }
         $presentation = "";
-        $presentation .= "ID";
-        $presentation .= "Nom : " . $this->nom . "<br>";
+        // $presentation .= "Nom : " . $this->nom . "<br>";
         $presentation .= "Endurance : " . $this->endurance . "<br>";
         $presentation .= "Attaque : " . $this->att . "<br>";
         $presentation .= "Défense : " . $this->def . "<br>";
         $presentation .= "Vitesse : " . $this->vitesse . "<br>";
-
-        echo '<div class="card" style="width: 18rem;">';
-        echo '<img src="/img/jude.png" class="card-img-top" alt="...">';
+        
+        echo '<div class=col-' . $col . '>';
+        echo '<div class="card mx-auto" style="width : 12vw;">';
+        echo '<img src="/img/jude.  png" class="card-img-top" alt="...">';
         echo '<div class="card-body">';
-        echo "<p class='card-text'>" . $presentation  . "</p>";
+        echo "<div class='card-text'>" . $presentation  . "</div>";
         echo '</div>';
         echo '</div>';
->>>>>>> c2e1d83a72f119e83c0d4e9d033dd915a5962527
-    }
-
-    public function __toString()
-    {
-        return $this->affichage();
+        echo '</div>';
     }
 }
-
-$joueur1 = new Player(1, 'Ronaldo', 'Christiano', 30, 50,'attaquant',12,20,50);
-echo $joueur1;

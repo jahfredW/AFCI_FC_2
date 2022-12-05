@@ -26,8 +26,8 @@ class Team {
     public function setName($value){
         $this->nom = $value;
     }
-    public function setListeAttaquants($liste){
-        $this->listeAttaquants = $liste;
+    public function setListeAttaquants($attaquants){
+        array_push($this->listeAttaquants, $attaquants);
     }
 
     public function getListeDefenseurs(){ return $this->listeDefenseurs;}
@@ -43,28 +43,29 @@ class Team {
     public function showListeAttaquants()
     {
         foreach ($this->getListeAttaquants() as $player){
-            echo $player . "\n";
+            $player->afficher_joueur(count($this->getListeAttaquants())) ;
         }
     }
 
     public function showListeDefenseurs()
     {
         foreach ($this->getListeDefenseurs() as $player){
-            echo $player . "\n";
+            $player->afficher_joueur(count($this->getListeDefenseurs()));
         }
     }
 
     public function showListeMilieux()
     {
         foreach ($this->getListeMilieux() as $player){
-            echo $player . "\n";
+
+             $player->afficher_joueur(count($this->getListeMilieux()));
         }
     }
 
     public function showListeGoal()
     {
-        foreach ($this->getListeDefenseurs() as $player){
-            echo $player . "\n";
+        foreach ($this->getListeGoal() as $player){
+             $player->afficher_joueur(count($this->getListeGoal()));
         }
     }
 

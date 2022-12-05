@@ -57,6 +57,27 @@ $dani = new Player(13, 'Dani Alves', 64, 73, 74, 71);
 $casemiro = new Player(14, 'Casemiro', 90, 73, 87, 63);
 
 
-$france = new Team('France', [$joueur1]);
+$france = new Team('France', [], [], [], []);
+$france->setListeAttaquants($joueur3);
+$france->setListeAttaquants($joueur6);
+$france->setListeAttaquants($joueur8);
 
-$france->showListe();
+$france->setListeDefenseurs($joueur1);
+$france->setListeDefenseurs($joueur2);
+$france->setListeDefenseurs($joueur5);
+$france->setListeDefenseurs($joueur11);
+
+$france->setListeMilieux($joueur4);
+$france->setListeMilieux($joueur7);
+$france->setListeMilieux($joueur9);
+
+$france->setListeGoal($joueur10);
+
+
+
+$france->showListeGoal();
+
+
+
+
+
