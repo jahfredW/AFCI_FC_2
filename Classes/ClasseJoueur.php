@@ -12,7 +12,11 @@ class Player {
 
     //Constructeur
 
+<<<<<<< HEAD
     public function __construct($id, $nom, $endurance, $att, $def, $vitesse)
+=======
+    public function __construct($id, $nom, $endurance, $position, $att, $def, $vitesse)
+>>>>>>> c2e1d83a72f119e83c0d4e9d033dd915a5962527
     {
         $this->id = $id;
         $this->nom = $nom;
@@ -43,12 +47,30 @@ class Player {
     //Fonction pour afficher
 
     public function affichage(){
+<<<<<<< HEAD
         echo "ID : " . $this->id . "<br>";
         echo "Nom : " . $this->nom . "<br>";
         echo "Endurance : " . $this->endurance . "<br>";
         echo "Attaque : " . $this->att . "<br>";
         echo "Défense : " . $this->def . "<br>";
         echo "Vitesse : " . $this->vitesse . "<br>";
+=======
+        
+        $presentation = "";
+        $presentation .= "ID";
+        $presentation .= "Nom : " . $this->nom . "<br>";
+        $presentation .= "Endurance : " . $this->endurance . "<br>";
+        $presentation .= "Attaque : " . $this->att . "<br>";
+        $presentation .= "Défense : " . $this->def . "<br>";
+        $presentation .= "Vitesse : " . $this->vitesse . "<br>";
+
+        echo '<div class="card" style="width: 18rem;">';
+        echo '<img src="/img/jude.png" class="card-img-top" alt="...">';
+        echo '<div class="card-body">';
+        echo "<p class='card-text'>" . $presentation  . "</p>";
+        echo '</div>';
+        echo '</div>';
+>>>>>>> c2e1d83a72f119e83c0d4e9d033dd915a5962527
     }
 
     public function __toString()

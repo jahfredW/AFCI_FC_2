@@ -4,45 +4,70 @@ class Team {
     private string $nom;
     private array $listeAttaquants;
     private array $listeDefenseurs;
-    private array $listeMilieus;
-    private array $ilisteGoal;
+    private array $listeMilieux;
+    private array $listeGoal;
 
-    public function __construct($nom, $listePlayer, $isAttaquant, $isMilieu, $isDefenseur, $isGoal)
+    public function __construct($nom, $listeAttaquants, $listeDefenseurs, $listeMilieux, $listeGoal)
     {
         $this->nom = $nom;
-        $this->listePlayer = $listePlayer;
-        $this->$isAttaquant = $isAttaquant;
-        $this->$isDefenseur = $isDefenseur;
-        $this->$isMilieu = $isMilieu;
-        $this->$isGoal = $isGoal;
+        $this->listeAttaquants = $listeAttaquants;
+        $this->listeDefenseurs = $listeDefenseurs;
+        $this->listeMilieux = $listeMilieux;
+        $this->listeGoal = $listeGoal;
     }
 
     public function getName(){
         return $this->nom;
     }
-    public function getListePlayer(){
-        return $this->listePlayer;
+    public function getListeAttaquants(){
+        return $this->listeAttaquants;
     }
 
     public function setName($value){
         $this->nom = $value;
     }
-    public function setListePlayer($liste){
-        $this->listePlayer = $liste;
+    public function setListeAttaquants($liste){
+        $this->listeAttaquants = $liste;
     }
 
-    public function addPlayer(& $Player){
-        array_push($this->listePlayer, $Player);
-    }
+    public function getListeDefenseurs(){ return $this->listeDefenseurs;}
+    public function setListeDefenseurs($player){ array_push($this->listeDefenseurs,$player);}
+    
+    public function getListeMilieux(){ return $this->listeMilieux;}
+    public function setListeMilieux($player){ array_push($this->listeMilieux, $player);}
 
-    public function showListe()
+    public function getListeGoal(){ return $this->listeGoal;}
+    public function setListeGoal($player){ array_push($this->listeGoal, $player);}
+
+
+    public function showListeAttaquants()
     {
-        foreach ($this->getListePlayer() as $player){
+        foreach ($this->getListeAttaquants() as $player){
             echo $player . "\n";
         }
     }
 
-    public
+    public function showListeDefenseurs()
+    {
+        foreach ($this->getListeDefenseurs() as $player){
+            echo $player . "\n";
+        }
+    }
+
+    public function showListeMilieux()
+    {
+        foreach ($this->getListeMilieux() as $player){
+            echo $player . "\n";
+        }
+    }
+
+    public function showListeGoal()
+    {
+        foreach ($this->getListeDefenseurs() as $player){
+            echo $player . "\n";
+        }
+    }
+
 
 }
 
