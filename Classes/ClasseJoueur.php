@@ -4,8 +4,6 @@
 
 class Player {
     private string $nom;
-    private string $prenom;
-    private int $age;
     private int $endurance;
     private int $att;
     private int $def;
@@ -14,12 +12,10 @@ class Player {
 
     //Constructeur
 
-    public function __construct($id, $nom, $prenom, $age, $endurance, $att, $def, $vitesse)
+    public function __construct($id, $nom, $endurance, $att, $def, $vitesse)
     {
         $this->id = $id;
         $this->nom = $nom;
-        $this->prenom = $prenom;
-        $this->age = $age;
         $this->endurance = $endurance;
         $this->att = $att;
         $this->def = $def;
@@ -30,8 +26,6 @@ class Player {
 
     public function getId(){return $this->id;}
     public function getNom(){return $this->nom;}
-    public function getPrenom(){return $this->prenom;}
-    public function getAge(){return $this->age;}
     public function getEndurance(){return $this->endurance;}
     public function getAtt(){return $this->att;}
     public function getDef(){return $this->def;}
@@ -41,8 +35,6 @@ class Player {
 
     public function setId($id){$this->id = $id;}
     public function setNom($nom){$this->nom = $nom;}
-    public function setPrenom($prenom){$this->prenom = $prenom;}
-    public function setAge($age){ $this->age = $age;}
     public function setEndurance($endurance){$this->endurance = $endurance;}
     public function setAtt($att){$this->att = $att;}
     public function setDef($def){$this->def = $def;}
@@ -53,11 +45,17 @@ class Player {
     public function affichage(){
         echo "ID : " . $this->id . "<br>";
         echo "Nom : " . $this->nom . "<br>";
-        echo "Prenom : " . $this->prenom . "<br>";
-        echo "Age : " . $this->age . "<br>";
         echo "Endurance : " . $this->endurance . "<br>";
         echo "Attaque : " . $this->att . "<br>";
         echo "Défense : " . $this->def . "<br>";
         echo "Vitesse : " . $this->vitesse . "<br>";
     }
+
+    public function __toString()
+    {
+        return $this->affichage();
+    }
 }
+
+$joueur1 = new Player(1, 'Ronaldo', 'Christiano', 30, 50,'attaquant',12,20,50);
+echo $joueur1;
