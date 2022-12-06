@@ -46,8 +46,8 @@ $france->setListeGoal($joueur10);
 
 
 ?>
-
-<div class="w-100">
+<link rel="stylesheet" href="../style.css">
+<div id="test" class="w-100">
     <div class="row">
     
         <div class="col-2 card">
