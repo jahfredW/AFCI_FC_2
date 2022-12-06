@@ -22,7 +22,7 @@ $casemiro = new Player(14, 'Casemiro', 90, 73, 87, 63);
 
 $bresil = new Team('Bresil', [], [], [], [], []);
 $bresil->setListeAttaquants($neymar);
-$bresil->setListeAttaquants($fabinho);
+$bresil->setListeAttaquants($antony);
 $bresil->setListeAttaquants($vinicius);
 
 
@@ -38,7 +38,7 @@ $bresil->setListeRemplacant($casemiro);
 
 $bresil->setListeMilieux($fred);
 $bresil->setListeMilieux($danilo);
-$bresil->setListeMilieux($antony);
+$bresil->setListeMilieux($fabinho);
 
 $bresil->setListeGoal($bruno);
 

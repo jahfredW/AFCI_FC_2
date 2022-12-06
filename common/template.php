@@ -11,7 +11,7 @@
     
     <title>template</title>
 </head>
-<?php $equipes = ["France", "Pays-bas", "Italie"] ?>
+<?php $equipes = ["France", "Angleterre", "Bresil", "CASSOS 4 LIFE IZI MONEY GANG F*CK DA COPS"] ?>
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container-fluid">
@@ -33,7 +33,7 @@
           <div class="dropdown-menu">
             
             <?php for( $index = 1; $index <= count($equipes); $index ++): ?>
-              <a class="dropdown-item" href="/afci_fc_2/common/equipes/equipe_<?php echo $index ?>.php"><?php echo $equipes[$index - 1] ?></a>
+              <a class="dropdown-item" href="/afci/common/equipes/equipe_<?php echo $index ?>.php"><?php echo $equipes[$index - 1] ?></a>
             <?php endfor; ?>
           </div>
         </li>
