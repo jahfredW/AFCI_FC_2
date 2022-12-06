@@ -44,8 +44,8 @@
 </nav>
 
 <!-- <div style="background-image : url('../../image/alisson.png');" > -->
-<div>
-<?php echo $content ?>
+<div style = "background-image : url('../../image/Background.png')">
+<?php echo $content?>
 </div>
 
 
