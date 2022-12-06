@@ -14,7 +14,7 @@ $fabinho = new Player(6, 'Fabinho', 83, 69, 86, 66);
 $danilo = new Player(7, 'Danilo', 80, 68, 82, 73);
 $vinicius = new Player(8, 'Vinicius', 67, 79, 29, 95);
 $antony = new Player(9, 'Antony', 70, 75, 40, 94);
-$bruno = new Player(10, 'Bruno Guimaraes', 78, 68, 77, 70);
+$bruno = new Player(10, 'Bruno Gyumaraes', 78, 68, 77, 70);
 $barros = new Player(11, 'De Barros Ribeiro' ,83, 77, 49, 82);
 $rodrygo = new Player(12, 'Rodrygo', 57, 77, 33, 89);
 $dani = new Player(13, 'Dani Alves', 64, 73, 74, 71);
@@ -57,7 +57,7 @@ $bresil->setListeGoal($bruno);
         </div>
         <div class="col-10">
         <div class="text-center mx-auto mt-4">
-                <img src="../../image/drapeau_france.png">
+                <img src="../../image/drapeau_bresil.png">
                 <div class="h2 text-center mb-5">Equipe de <?php echo $bresil->getName() ?></div>
             </div>
             <div class="row mt-2 text-center d-flex justify-center">

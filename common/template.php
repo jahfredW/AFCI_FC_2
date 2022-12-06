@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="../style.css">
     
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
-    <!-- <link rel="stylesheet" href="https://bootswatch.com/5/quartz/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="https://bootswatch.com/5/quartz/bootstrap.min.css">
     
     <title>template</title>
 </head>
@@ -42,7 +42,7 @@
   </div>
 </nav>
 
-<div style="background-image : url('../../image/alisson.png');" >
+<div style="background-image : url('../../image/Background.png');" >
 <?php echo $content ?>
 </div>
 

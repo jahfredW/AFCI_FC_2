@@ -58,7 +58,7 @@ $angleterre->setListeGoal($pickford);
         </div>
         <div class="col-10">
         <div class="text-center mx-auto mt-4">
-                <img src="../../image/drapeau_france.png">
+                <img src="../../image/drapeau_angleterre.png">
                 <div class="h2 text-center mb-5">Equipe de <?php echo $angleterre->getName() ?></div>
             </div>
             <div class="row mt-2 text-center d-flex justify-center">
