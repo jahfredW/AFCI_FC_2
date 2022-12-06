@@ -69,4 +69,8 @@ class Player {
         echo '</div>';
         echo '</div>';
     }
+
+    public function afficher_nom(){
+        echo $this->nom . "<br>";
+    }
 }

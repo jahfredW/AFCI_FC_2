@@ -69,8 +69,17 @@ class Team {
         }
     }
 
-
+    public function getListeAll()
+    {
+        $listeJoueur = array_merge($this->getListeAttaquants(), $this->getListeMilieux(), $this->getListeDefenseurs(), $this->getListeGoal());
+        foreach ($listeJoueur as $Joueur){
+            $Joueur->afficher_nom();
+        }
+    }
 }
+
+
+
 
 
 

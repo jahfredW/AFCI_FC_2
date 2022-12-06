@@ -75,7 +75,7 @@ $france->setListeGoal($joueur10);
 
 
 
-$france->showListeGoal();
+$france->getListeAll();
 
 
 
