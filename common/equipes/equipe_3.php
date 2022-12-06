@@ -52,24 +52,24 @@ $bresil->setListeGoal($bruno);
             
             <div class="h2 text-center mt-2">Liste des Joueurs</div>
             <div class="row mt-3 fs-4">
-                <?= $france->getListeAll() ?>
+                <?= $bresil->getListeAll() ?>
             </div>
         </div>
         <div class="col-10">
         <div class="text-center mx-auto mt-4">
                 <img src="../../image/drapeau_france.png">
-                <div class="h2 text-center mb-5">Equipe de <?php echo $france->getName() ?></div>
+                <div class="h2 text-center mb-5">Equipe de <?php echo $bresil->getName() ?></div>
             </div>
             <div class="row mt-2 text-center d-flex justify-center">
-                <?php $france->showListeAttaquants() ?>
+                <?php $bresil->showListeAttaquants() ?>
             </div>
             <div class="row mt-5 text-center">
-                <?php $france->showListeMilieux() ?>
+                <?php $bresil->showListeMilieux() ?>
             </div>
             <div class="row mt-5 text-center">
-                 <?php $france->showListeDefenseurs() ?>
+                 <?php $bresil->showListeDefenseurs() ?>
             <div class="row mt-5 text-center">
-            <?php $france->showListeGoal() ?>
+            <?php $bresil->showListeGoal() ?>
             </div>
         </div>
     </div>
