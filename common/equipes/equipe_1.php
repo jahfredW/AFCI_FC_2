@@ -16,8 +16,12 @@ $joueur8 = new Player(8, 'Mbappé', 80, 91, 39, 98);
 $joueur9 = new Player(9, 'Upamecano', 82, 44, 81, 83);
 $joueur10 = new Player(10, 'Lloris', 84, 61, 83, 88);
 $joueur11 = new Player (11, 'Koundé', 78, 45, 85, 84);
+$joueur12 = new Player(12, 'Benzema', 78, 88, 39, 80);
+$joueur13 = new Player(13, 'Rabiot', 80, 74, 77, 76);
+$joueur14 = new Player(14, 'Walid', 99, 99, 99, 99);
+$joueur15 = new Player(15, 'Tchouaméni', 83, 71, 82, 71);
 
-$france = new Team('France', [], [], [], []);
+$france = new Team('France', [], [], [], [], []);
 $france->setListeAttaquants($joueur3);
 $france->setListeAttaquants($joueur6);
 $france->setListeAttaquants($joueur8);
@@ -28,6 +32,10 @@ $france->setListeDefenseurs($joueur2);
 $france->setListeDefenseurs($joueur5);
 $france->setListeDefenseurs($joueur11);
 
+$france->setListeRemplacant($joueur12);
+$france->setListeRemplacant($joueur13);
+$france->setListeRemplacant($joueur14);
+$france->setListeRemplacant($joueur15);
 
 
 $france->setListeMilieux($joueur4);
@@ -41,14 +49,19 @@ $france->setListeGoal($joueur10);
 
 <div class="w-100">
     <div class="row">
-        <div class="col-2" style="border-right: 1px solid black;">
-            <div class="row mt-3">
-                <?php for($index = 0; $index < 11; $index++): ?>
-                    <div class="col-12 border-right mt-2 text-center ">Joueur_<?= $index ?></div>
-                <?php endfor ?>
+    
+        <div class="col-2 card">
+            
+            <div class="h2 text-center mt-2">Liste des Joueurs</div>
+            <div class="row mt-3 fs-4">
+                <?= $france->getListeAll() ?>
             </div>
         </div>
-        <div class="col-10 my-auto">
+        <div class="col-10">
+        <div class="text-center mx-auto mt-4">
+                <img src="../../image/drapeau_france.png">
+                <div class="h2 text-center mb-5">Equipe de <?php echo $france->getName() ?></div>
+            </div>
             <div class="row mt-2 text-center d-flex justify-center">
                 <?php $france->showListeAttaquants() ?>
             </div>

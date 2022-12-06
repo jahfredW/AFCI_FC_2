@@ -76,7 +76,7 @@ $booba = new Player (14, "Booba", 75, 85, 81, 54);
 $zemmour = new Player (15, "Le Z le Maléfique", 0, 0, 0, 0);
 
 
-$france = new Team('France', [], [], [], []);
+$france = new Team('France', [], [], [], [], []);
 $france->setListeAttaquants($joueur3);
 $france->setListeAttaquants($joueur6);
 $france->setListeAttaquants($joueur8);
@@ -86,6 +86,12 @@ $france->setListeDefenseurs($joueur2);
 $france->setListeDefenseurs($joueur5);
 $france->setListeDefenseurs($joueur11);
 
+$france->setListeRemplacant($joueur12);
+$france->setListeRemplacant($joueur13);
+$france->setListeRemplacant($joueur14);
+$france->setListeRemplacant($joueur15);
+
+
 $france->setListeMilieux($joueur4);
 $france->setListeMilieux($joueur7);
 $france->setListeMilieux($joueur9);
@@ -94,7 +100,7 @@ $france->setListeGoal($joueur10);
 
 
 
-$france->showListeGoal();
+$france->getListeAll();
 
 
 
