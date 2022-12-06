@@ -21,7 +21,7 @@ $alexander = new Player(12, 'Alexander-Arnold', 73, 69, 80, 76);
 $walker = new Player(13, 'Walker', 85, 66, 83, 94);
 $mount = new Player(14, 'Mount', 67, 81, 55, 74);
 
-$angleterre = new Team('Angleterre', [], [], [], [], []);
+$angleterre = new Team('Angleterre', [], [], [], [], [], 'drapeau_angleterre');
 $angleterre->setListeAttaquants($grealish);
 $angleterre->setListeAttaquants($foden);
 $angleterre->setListeAttaquants($sterling);
@@ -43,46 +43,12 @@ $angleterre->setListeMilieux($rice);
 
 $angleterre->setListeGoal($pickford);
 
+$angleterre->render();
 
 ?>
-
-<div class="w-100">
-    <div class="row">
-    
-        <div class="col-2 card">
-            
-            <div class="h2 text-center mt-2">Liste des Joueurs</div>
-            <div class="row mt-3 fs-4">
-                <?= $angleterre->getListeAll() ?>
-            </div>
-        </div>
-        <div class="col-10">
-        <div class="text-center mx-auto mt-4">
-                <img src="../../image/drapeau_angleterre.png">
-                <div class="h2 text-center mb-5">Equipe de <?php echo $angleterre->getName() ?></div>
-            </div>
-            <div class="row mt-2 text-center d-flex justify-center">
-                <?php $angleterre->showListeAttaquants() ?>
-            </div>
-            <div class="row mt-5 text-center">
-                <?php $angleterre->showListeMilieux() ?>
-            </div>
-            <div class="row mt-5 text-center">
-                 <?php $angleterre->showListeDefenseurs() ?>
-            <div class="row mt-5 text-center">
-            <?php $angleterre->showListeGoal() ?>
-            </div>
-        </div>
-    </div>
-</div>
-
-
-
-
 
 
 <?php 
 $content = ob_get_clean(); 
-$title = "Page de connexion";
 require "../template.php";
 ?>

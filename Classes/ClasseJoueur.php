@@ -44,6 +44,30 @@ class Player {
 
     //Fonction pour afficher
 
+    public function afficher_joueur_cassos($tailleListe){
+        
+        if($tailleListe == 3){
+            $col = 4;
+        } elseif ($tailleListe == 4){
+            $col = 3;
+        } elseif ($tailleListe == 1){
+            $col = 12;
+        }
+        $presentation = "";
+        // $presentation .= "Nom : " . $this->nom . "<br>";
+        $presentation .= "Endurance : " . $this->endurance . "<br>";
+        $presentation .= "Attaque : " . $this->att . "<br>";
+        $presentation .= "Défense : " . $this->def . "<br>";
+        $presentation .= "Vitesse : " . $this->vitesse . "<br>";
+        
+        echo '<div class=col-' . $col . '>';
+        echo '<div class="card mx-auto" style="width : 12vw;">';
+        echo '<img src="../../image/' . $this->nom .  '.png" class="card-img-top" alt="...">';
+        echo '</div>';
+        echo '</div>';
+    }
+
+
     public function afficher_joueur($tailleListe){
         
         if($tailleListe == 3){

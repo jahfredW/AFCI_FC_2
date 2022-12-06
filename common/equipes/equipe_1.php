@@ -21,7 +21,7 @@ $joueur13 = new Player(13, 'Rabiot', 80, 74, 77, 76);
 $joueur14 = new Player(14, 'Walid', 99, 99, 99, 99);
 $joueur15 = new Player(15, 'Tchouaméni', 83, 71, 82, 71);
 
-$france = new Team('France', [], [], [], [], []);
+$france = new Team('France', [], [], [], [], [], "drapeau_france");
 $france->setListeAttaquants($joueur3);
 $france->setListeAttaquants($joueur6);
 $france->setListeAttaquants($joueur8);
@@ -44,46 +44,11 @@ $france->setListeMilieux($joueur9);
 
 $france->setListeGoal($joueur10);
 
+$france->render();
 
 ?>
-<link rel="stylesheet" href="../style.css">
-<div id="test" class="w-100">
-    <div class="row">
-    
-        <div class="col-2 card">
-            
-            <div class="h2 text-center mt-2">Liste des Joueurs</div>
-            <div class="row mt-3 fs-4">
-                <?= $france->getListeAll() ?>
-            </div>
-        </div>
-        <div class="col-10">
-        <div class="text-center mx-auto mt-4">
-                <img src="../../image/drapeau_france.png">
-                <div class="h2 text-center mb-5">Equipe de <?php echo $france->getName() ?></div>
-            </div>
-            <div class="row mt-2 text-center d-flex justify-center">
-                <?php $france->showListeAttaquants() ?>
-            </div>
-            <div class="row mt-5 text-center">
-                <?php $france->showListeMilieux() ?>
-            </div>
-            <div class="row mt-5 text-center">
-                 <?php $france->showListeDefenseurs() ?>
-            <div class="row mt-5 text-center">
-            <?php $france->showListeGoal() ?>
-            </div>
-        </div>
-    </div>
-</div>
 
-
-
-
-
-
-<?php 
+<?php
 $content = ob_get_clean(); 
-$title = "Page de connexion";
 require "../template.php";
 ?>

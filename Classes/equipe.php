@@ -1,14 +1,18 @@
 <?php
 
-class Team {
+require 'render.php';
+
+class Team extends Render {
     private string $nom;
     private array $listeAttaquants;
     private array $listeDefenseurs;
     private array $listeMilieux;
     private array $listeGoal;
     private array $listeRemplacant;
+    public string $flag;
 
-    public function __construct($nom, $listeAttaquants, $listeDefenseurs, $listeMilieux, $listeGoal, $listeRemplacant)
+
+    public function __construct($nom, $listeAttaquants, $listeDefenseurs, $listeMilieux, $listeGoal, $listeRemplacant, $flag)
     {
         $this->nom = $nom;
         $this->listeAttaquants = $listeAttaquants;
@@ -16,6 +20,7 @@ class Team {
         $this->listeMilieux = $listeMilieux;
         $this->listeGoal = $listeGoal;
         $this->listeRemplacant = $listeRemplacant;
+        $this->flag = $flag;
     }
 
     public function getName(){
@@ -74,6 +79,35 @@ class Team {
         }
     }
 
+    public function showListeAttaquantsCassos()
+    {
+        foreach ($this->getListeAttaquants() as $player){
+            $player->afficher_joueur_cassos(count($this->getListeAttaquants())) ;
+        }
+    }
+
+    public function showListeDefenseursCassos()
+    {
+        foreach ($this->getListeDefenseurs() as $player){
+            $player->afficher_joueur_cassos(count($this->getListeDefenseurs()));
+        }
+    }
+
+    public function showListeMilieuxCassos()
+    {
+        foreach ($this->getListeMilieux() as $player){
+
+             $player->afficher_joueur_cassos(count($this->getListeMilieux()));
+        }
+    }
+
+    public function showListeGoalCassos()
+    {
+        foreach ($this->getListeGoal() as $player){
+             $player->afficher_joueur_cassos(count($this->getListeGoal()));
+        }
+    }
+
     public function getListeAll()
     {
         $listeJoueur = array_merge($this->getListeAttaquants(), $this->getListeMilieux(), $this->getListeDefenseurs(), $this->getListeGoal()
@@ -82,6 +116,10 @@ class Team {
             $Joueur->afficher_nom();
         }
     }
+
+
+    
+
 }
 
 

@@ -24,7 +24,7 @@ $travaux = new Player (13, "Walid le Bon Tuyau", 100, 95, 99, 85);
 $booba = new Player (14, "Booba", 75, 85, 81, 54);
 $zemmour = new Player (15, "Le Z le Maléfique", 0, 0, 0, 0);
 
-$cassos = new Team('CASSOS 4 LIFE IZI MONEY GANG F*CK DA COPS', [], [], [], [], []);
+$cassos = new Team('CASSOS 4 LIFE IZI MONEY GANG F*CK DA COPS', [], [], [], [], [], 'drapeau_cassos');
 $cassos->setListeAttaquants($chainz);
 $cassos->setListeAttaquants($damien);
 $cassos->setListeAttaquants($travaux);
@@ -48,38 +48,9 @@ $cassos->setListeMilieux($syrine);
 
 $cassos->setListeGoal($zemmour);
 
-
+$cassos->renderCassos();
 ?>
-<link rel="stylesheet" href="../style.css">
-<div id="test" class="w-100">
-    <div class="row">
-    
-        <div class="col-2 card">
-            
-            <div class="h2 text-center mt-2">Liste des Joueurs</div>
-            <div class="row mt-3 fs-4">
-                <?= $cassos->getListeAll() ?>
-            </div>
-        </div>
-        <div class="col-10">
-        <div class="text-center mx-auto mt-4">
-                <img src="../../image/drapeau_cassos.png">
-                <div class="h2 text-center mb-5">Equipe de Tocards <?php echo $cassos->getName() ?></div>
-            </div>
-            <div class="row mt-2 text-center d-flex justify-center">
-                <?php $cassos->showListeAttaquants() ?>
-            </div>
-            <div class="row mt-5 text-center">
-                <?php $cassos->showListeMilieux() ?>
-            </div>
-            <div class="row mt-5 text-center">
-                 <?php $cassos->showListeDefenseurs() ?>
-            <div class="row mt-5 text-center">
-            <?php $cassos->showListeGoal() ?>
-            </div>
-        </div>
-    </div>
-</div>
+
 
 
 

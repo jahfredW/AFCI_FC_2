@@ -20,7 +20,7 @@ $rodrygo = new Player(12, 'Rodrygo', 57, 77, 33, 89);
 $dani = new Player(13, 'Dani Alves', 64, 73, 74, 71);
 $casemiro = new Player(14, 'Casemiro', 90, 73, 87, 63);
 
-$bresil = new Team('Bresil', [], [], [], [], []);
+$bresil = new Team('Bresil', [], [], [], [], [], 'drapeau_bresil');
 $bresil->setListeAttaquants($neymar);
 $bresil->setListeAttaquants($antony);
 $bresil->setListeAttaquants($vinicius);
@@ -42,42 +42,8 @@ $bresil->setListeMilieux($fabinho);
 
 $bresil->setListeGoal($bruno);
 
-
+$bresil->render();
 ?>
-<link rel="stylesheet" href="../style.css">
-<div id="test" class="w-100">
-    <div class="row">
-    
-        <div class="col-2 card">
-            
-            <div class="h2 text-center mt-2">Liste des Joueurs</div>
-            <div class="row mt-3 fs-4">
-                <?= $bresil->getListeAll() ?>
-            </div>
-        </div>
-        <div class="col-10">
-        <div class="text-center mx-auto mt-4">
-                <img src="../../image/drapeau_bresil.png">
-                <div class="h2 text-center mb-5">Equipe de <?php echo $bresil->getName() ?></div>
-            </div>
-            <div class="row mt-2 text-center d-flex justify-center">
-                <?php $bresil->showListeAttaquants() ?>
-            </div>
-            <div class="row mt-5 text-center">
-                <?php $bresil->showListeMilieux() ?>
-            </div>
-            <div class="row mt-5 text-center">
-                 <?php $bresil->showListeDefenseurs() ?>
-            <div class="row mt-5 text-center">
-            <?php $bresil->showListeGoal() ?>
-            </div>
-        </div>
-    </div>
-</div>
-
-
-
-
 
 
 <?php 
