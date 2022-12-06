@@ -67,6 +67,12 @@ $france->setListeDefenseurs($joueur2);
 $france->setListeDefenseurs($joueur5);
 $france->setListeDefenseurs($joueur11);
 
+$france->setListeRemplacant($joueur12);
+$france->setListeRemplacant($joueur13);
+$france->setListeRemplacant($joueur14);
+$france->setListeRemplacant($joueur15);
+
+
 $france->setListeMilieux($joueur4);
 $france->setListeMilieux($joueur7);
 $france->setListeMilieux($joueur9);

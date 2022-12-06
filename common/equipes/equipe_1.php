@@ -52,7 +52,8 @@ $france->setListeGoal($joueur10);
         <div class="col-2" style="border-right: 1px solid black;">
             <div class="row mt-3">
                 <?php for($index = 0; $index < 11; $index++): ?>
-                    <div class="col-12 border-right mt-2 text-center ">Joueur_<?= $index ?></div>
+                    <div class="col-12 border-right mt-2 text-center ">
+                        _<?= $index ?></div>
                 <?php endfor ?>
             </div>
         </div>
