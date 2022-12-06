@@ -6,14 +6,16 @@ class Team {
     private array $listeDefenseurs;
     private array $listeMilieux;
     private array $listeGoal;
+    private array $listeRemplacant;
 
-    public function __construct($nom, $listeAttaquants, $listeDefenseurs, $listeMilieux, $listeGoal)
+    public function __construct($nom, $listeAttaquants, $listeDefenseurs, $listeMilieux, $listeGoal, $listeRemplacant)
     {
         $this->nom = $nom;
         $this->listeAttaquants = $listeAttaquants;
         $this->listeDefenseurs = $listeDefenseurs;
         $this->listeMilieux = $listeMilieux;
         $this->listeGoal = $listeGoal;
+        $this->listeRemplacant = $listeRemplacant;
     }
 
     public function getName(){
@@ -38,6 +40,9 @@ class Team {
 
     public function getListeGoal(){ return $this->listeGoal;}
     public function setListeGoal($player){ array_push($this->listeGoal, $player);}
+
+    public function getListeRemplacant(){ return $this->listeRemplacant;}
+    public function setListeRemplacant($player){ array_push($this->listeRemplacant, $player);}
 
 
     public function showListeAttaquants()
