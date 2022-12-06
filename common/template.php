@@ -13,32 +13,26 @@
 </head>
 <?php $equipes = ["France", "Pays-bas", "Italie"] ?>
 <body>
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container-fluid">
+  <a class="navbar-brand" href="#">
+      <img src="../../image/Logo.png" style="height : 10vh; margin-left: 1.8vw;" alt="..." >
+    </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarColor01">
       <ul class="navbar-nav me-auto">
-        <li class="nav-item">
-          <a class="nav-link active" href="/afci/common/index.php">Menu principal
-            <span class="visually-hidden">(current)</span>
-          </a>
-        </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Equipe</a>
           <div class="dropdown-menu">
             
             <?php for( $index = 1; $index <= count($equipes); $index ++): ?>
-              <a class="dropdown-item" href="/afci/common/equipes/equipe_<?php echo $index ?>.php"><?php echo $equipes[$index - 1] ?></a>
+              <a class="dropdown-item" href="/afci_fc_2/common/equipes/equipe_<?php echo $index ?>.php"><?php echo $equipes[$index - 1] ?></a>
             <?php endfor; ?>
           </div>
         </li>
       </ul>
-      <form class="d-flex">
-        <input class="form-control me-sm-2" type="text" placeholder="Search">
-        <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
-      </form>
     </div>
   </div>
 </nav>

@@ -49,13 +49,19 @@ $france->setListeGoal($joueur10);
 
 <div class="w-100">
     <div class="row">
-        <div class="col-2" style="border-right: 1px solid black;">
-            <div class="h2 text-center mt-4">Liste des Joueurs</div>
+    
+        <div class="col-2 card">
+            
+            <div class="h2 text-center mt-2">Liste des Joueurs</div>
             <div class="row mt-3 fs-4">
                 <?= $france->getListeAll() ?>
             </div>
         </div>
-        <div class="col-10 my-auto mt-4">
+        <div class="col-10">
+        <div class="text-center mx-auto mt-4">
+                <img src="../../image/drapeau_france.png">
+                <div class="h2 text-center mb-5">Equipe de <?php echo $france->getName() ?></div>
+            </div>
             <div class="row mt-2 text-center d-flex justify-center">
                 <?php $france->showListeAttaquants() ?>
             </div>
