@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://bootswatch.com/5/quartz/bootstrap.min.css">
     <link rel="stylesheet" href="../style.css">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="https://bootswatch.com/5/quartz/bootstrap.min.css"> -->
     
     <title>template</title>
 </head>
@@ -23,12 +23,17 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarColor01">
       <ul class="navbar-nav me-auto">
+        <li class="nav-item">
+          <a class="nav-link active" href="/afci/common/index.php">Menu principal
+            <span class="visually-hidden">(current)</span>
+          </a>
+        </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Equipe</a>
           <div class="dropdown-menu">
             
             <?php for( $index = 1; $index <= count($equipes); $index ++): ?>
-              <a class="dropdown-item" href="/afci_fc_2/common/equipes/equipe_<?php echo $index ?>.php"><?php echo $equipes[$index - 1] ?></a>
+              <a class="dropdown-item" href="/afci/common/equipes/equipe_<?php echo $index ?>.php"><?php echo $equipes[$index - 1] ?></a>
             <?php endfor; ?>
           </div>
         </li>
@@ -37,9 +42,8 @@
   </div>
 </nav>
 
-<!-- <div style="background-image : url('../../image/alisson.png');" > -->
-<div style = "background-image : url('../../image/Background.png')">
-<?php echo $content?>
+<div style="background-image : url('../../image/alisson.png');" >
+<?php echo $content ?>
 </div>
 
 
