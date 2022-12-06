@@ -49,7 +49,7 @@ $france->setListeGoal($joueur10);
 
 <div class="w-100">
     <div class="row">
-        <div class="col-2" style="border-right: 1px solid black;">
+        <div class="col-2">
             <div class="h2 text-center mt-4">Liste des Joueurs</div>
             <div class="row mt-3 fs-4">
                 <?= $france->getListeAll() ?>
