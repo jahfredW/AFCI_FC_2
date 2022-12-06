@@ -62,7 +62,7 @@ class Player {
         
         echo '<div class=col-' . $col . '>';
         echo '<div class="card mx-auto" style="width : 12vw;">';
-        echo '<img src="/img/jude.  png" class="card-img-top" alt="...">';
+        echo '<img src="../../image/' . $this->nom .  '.png" class="card-img-top" alt="...">';
         echo '<div class="card-body">';
         echo "<div class='card-text'>" . $presentation  . "</div>";
         echo '</div>';
@@ -71,6 +71,8 @@ class Player {
     }
 
     public function afficher_nom(){
-        echo $this->nom . "<br>";
+        echo '<div class="col-12 border-right mt-4 text-center ">';
+        echo $this->nom ;
+        echo '</div>';
     }
 }

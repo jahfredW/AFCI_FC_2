@@ -50,14 +50,12 @@ $france->setListeGoal($joueur10);
 <div class="w-100">
     <div class="row">
         <div class="col-2" style="border-right: 1px solid black;">
-            <div class="row mt-3">
-                <?php for($index = 0; $index < count($listeJoueur); $index++): ?>
-                    <div class="col-12 border-right mt-2 text-center ">
-                        _<?= $index ?></div>
-                <?php endfor ?>
+            <div class="h2 text-center mt-4">Liste des Joueurs</div>
+            <div class="row mt-3 fs-4">
+                <?= $france->getListeAll() ?>
             </div>
         </div>
-        <div class="col-10 my-auto">
+        <div class="col-10 my-auto mt-4">
             <div class="row mt-2 text-center d-flex justify-center">
                 <?php $france->showListeAttaquants() ?>
             </div>
